@@ -1,0 +1,26 @@
+<div class="menu"> 
+    <button (click)="fase1()">Jogar</button>
+    <button (click)="win()">Win</button>
+</div>
+<div class = 'abaWin' *ngIf="abaW">
+  <h1>Fim de Jogo</h1>
+</div>
+<div class="aba3">
+
+    <div class='table' *ngIf="abaJ">
+        
+        <tr *ngFor="let row of tabela; let r = index">
+          <td *ngFor="let col of row; let c = index">
+            <img src="assets/{{col}}.png"><!--mapeia tabela por array-->
+            
+          </td>
+        </tr>
+        <p>
+            Player 1:{{pontos_player1}}
+          </p>
+          <p>
+            Player 2:{{pontos_player2}}
+          </p>
+          <p>Posição: {{posPa}}</p>
+          <p>Posição: {{posPb}}</p>
+</div>
